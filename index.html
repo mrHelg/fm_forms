@@ -4,29 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Register</title>
   </head>
   <body>
-    <form action="" method="POST" enctype="">
-      <datalist></datalist>
-      <label>
-        <span>First name</span>
-        <input
-          autofocus
-          type="text"
-          placeholder="First name"
-          name="firstName"
-          required
-        />
-      </label>
-      <label
-        ><span>Last name</span>
-        <input autofocus type="text" placeholder="Last name" />
-      </label>
-      <label
-        ><span>Password</span>
-        <input autofocus type="password" placeholder="" />
-      </label>
-    </form>
+    <div class="wrapper">
+      <section>
+        <h1 class="register-header overflow">register</h1>
+        <p class="register-info">
+          Create your account. It's free and only takes a minutes
+        </p>
+      </section>
+      <form>
+        <div class="user-name">
+          <input type="text" placeholder="First Name" autofocus/>
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="Password" />
+        <input type="text" placeholder="Confirm Password" />
+        <label class="terms-police">
+          <input type="checkbox" name="">
+          <span>I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Police</a></span>
+        </label>
+        <button class="btn">register now</button>
+      </form>
+    </div>
+    <p class="sign-in">Already have an account? <a href="">Sing In</a></p>
   </body>
 </html>
