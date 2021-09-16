@@ -8,30 +8,53 @@
     <title>Register</title>
   </head>
   <body>
-    <div class="main-wrapper">
-      <section>
-        <div class="header-wrapper">
-          <h1 class="register-header overflow">register</h1>
-        </div>
-        <p class="register-info">
-          Create your account. It's free and only takes a minutes
-        </p>
-      </section>
-      <form>
-        <div class="user-name">
-          <input type="text" placeholder="First Name" autofocus/>
-          <input type="text" placeholder="Last Name" />
-        </div>
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Password" />
-        <input type="text" placeholder="Confirm Password" />
-        <label class="terms-police">
-          <input type="checkbox" name="">
-          <span>I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Police</a></span>
-        </label>
-        <button class="btn">register now</button>
-      </form>
+    <div class="wrapper">
+      <div class="form-wrapper">
+        <section>
+          <div class="header-wrapper">
+            <h1 class="register-header text-overflow">register</h1>
+          </div>
+          <p class="register-info">
+            Create your account. It's free and only takes a minutes
+          </p>
+        </section>
+        <form action="handler" method="GET">
+          <div class="user-name">
+            <input
+              type="text"
+              pattern="^[A-Z][a-z]{2,15}$"
+              placeholder="First Name"
+              name="firstName"
+              required
+              autofocus
+            />
+            <input
+              type="text"
+              pattern="^[A-Z][a-z]{2,15}$"
+              placeholder="Last Name"
+              name="lastName"
+              required
+            />
+          </div>
+          <input type="email" placeholder="Email" name="email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <input type="password" placeholder="Confirm Password" required />
+          <label class="terms-police">
+            <input type="checkbox" required />
+            <span
+              >I accept the <a href="#">Terms of Use</a> &
+              <a href="#">Privacy Police</a></span
+            >
+          </label>
+          <button class="btn text-overflow">register now</button>
+        </form>
+      </div>
+      <p class="sign-in">Already have an account? <a href="#">Sing In</a></p>
     </div>
-    <p class="sign-in">Already have an account? <a href="">Sing In</a></p>
   </body>
 </html>

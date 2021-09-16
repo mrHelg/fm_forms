@@ -1,20 +1,35 @@
+:root {
+  --text-color: rgb(121, 115, 115);
+  --background-color: rgb(235, 230, 223);
+  --main-background-color: rgb(101, 111, 145);
+  --register-line-color: rgb(202, 196, 196);
+  --link-color: rgb(0, 128, 0);
+  --singIn-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(136, 130, 130);
+  background-color: var(--main-background-color);
 }
-.main-wrapper {
+.wrapper {
   width: fit-content;
-  margin: 20px auto;
+  max-width: 500px;
+  margin: 10px auto;
   padding: 10px;
-  background-color: rgb(235, 230, 223);
-  border: 2px solid red;
+  background-color: var(--background-color);
 }
-.header-wrapper{
+.form-wrapper {
+  width: fit-content;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: var(--background-color);
+}
+.header-wrapper {
   position: relative;
   padding: 10px;
   margin: 0 auto;
@@ -26,7 +41,7 @@ body {
   width: fit-content;
   max-width: 100%;
   color: rgb(121, 115, 115);
-  background-color: rgb(235, 230, 223);
+  background-color: var(--background-color);
   text-align: center;
   text-transform: capitalize;
   font-size: 36px;
@@ -36,14 +51,15 @@ body {
   content: "";
   position: absolute;
   height: 2px;
-  background-color: rgb(128, 128, 134);
+  background-color: var(--register-line-color);
   top: 50%;
   left: 5px;
   right: 5px;
   z-index: -1;
 }
 .register-info {
-  color: rgb(121, 115, 115);
+  margin-top: 0;
+  color: var(--text-color);
   text-align: center;
 }
 form {
@@ -53,36 +69,40 @@ form {
 input {
   padding: 10px 20px;
   margin: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
 }
 .btn {
   padding: 10px 20px;
   margin: 10px;
   color: white;
-  background-color: rgb(101, 172, 101);
+  background-color: var(--link-color);
   text-transform: capitalize;
   border: none;
   font-weight: bold;
   font-size: 20px;
+  cursor: pointer;
 }
 .user-name {
   display: flex;
   justify-content: space-between;
 }
+
 .terms-police {
   color: grey;
 }
 .terms-police a {
-  color: green;
+  color: var(--link-color);
   text-decoration: none;
 }
-.sign-in {
-  color: white;
+.sign-in{
+  color: var(--singIn-color);
   text-align: center;
 }
 .sign-in > a {
   color: inherit;
 }
-.overflow {
+.text-overflow {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
