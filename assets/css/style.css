@@ -7,37 +7,42 @@ body {
   padding: 0;
   background-color: rgb(136, 130, 130);
 }
-.wrapper {
-  position: relative;
+.main-wrapper {
   width: fit-content;
   margin: 20px auto;
   padding: 10px;
   background-color: rgb(235, 230, 223);
   border: 2px solid red;
 }
-.register-header {
+.header-wrapper{
   position: relative;
+  padding: 10px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.register-header {
   margin: 0 auto;
   padding: 10px;
   width: fit-content;
+  max-width: 100%;
   color: rgb(121, 115, 115);
-  background: lawngreen;
+  background-color: rgb(235, 230, 223);
   text-align: center;
   text-transform: capitalize;
   font-size: 36px;
   font-weight: 300;
-  z-index: 1;
 }
-.register-header::before{
+.register-header::before {
   content: "";
   position: absolute;
-  left: 0;
-  width: 100px;
-  top: 0;
   height: 2px;
-  background: black;
+  background-color: rgb(128, 128, 134);
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  z-index: -1;
 }
-.register-info{
+.register-info {
   color: rgb(121, 115, 115);
   text-align: center;
 }
@@ -45,11 +50,11 @@ form {
   display: flex;
   flex-direction: column;
 }
-input{
+input {
   padding: 10px 20px;
   margin: 10px;
 }
-.btn{
+.btn {
   padding: 10px 20px;
   margin: 10px;
   color: white;
@@ -59,14 +64,14 @@ input{
   font-weight: bold;
   font-size: 20px;
 }
-.user-name{
+.user-name {
   display: flex;
   justify-content: space-between;
 }
-.terms-police{
+.terms-police {
   color: grey;
 }
-.terms-police a{
+.terms-police a {
   color: green;
   text-decoration: none;
 }
@@ -74,10 +79,10 @@ input{
   color: white;
   text-align: center;
 }
-.sign-in>a{
+.sign-in > a {
   color: inherit;
 }
-.overflow{
+.overflow {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
