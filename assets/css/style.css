@@ -1,11 +1,13 @@
 :root {
   --text-color: rgb(121, 115, 115);
   --background-color: rgb(235, 230, 223);
-  --main-background-color: rgb(101, 111, 145);
+  --body-background-color: rgb(101, 111, 145);
   --register-line-color: rgb(202, 196, 196);
   --link-color: rgb(0, 128, 0);
   --singIn-color: white;
+  --padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  --font-size: 16px;
 }
 * {
   box-sizing: border-box;
@@ -13,37 +15,29 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--main-background-color);
+  background-color: var(--body-background-color);
 }
-.wrapper {
+.main-wrapper {
   width: fit-content;
-  max-width: 500px;
-  margin: 10px auto;
-  padding: 10px;
-  background-color: var(--background-color);
+  max-width: 550px;
+  margin: 20px auto;
 }
 .form-wrapper {
-  width: fit-content;
-  max-width: 500px;
-  margin: 10px auto;
-  padding: 10px;
+  padding: var(--padding);
   background-color: var(--background-color);
 }
 .header-wrapper {
   position: relative;
-  padding: 10px;
-  margin: 0 auto;
   z-index: 1;
 }
 .register-header {
   margin: 0 auto;
   padding: 10px;
-  width: fit-content;
-  max-width: 100%;
-  color: rgb(121, 115, 115);
+  width: 160px;
+  color: var(--text-color);
   background-color: var(--background-color);
-  text-align: center;
   text-transform: capitalize;
+  text-align: center;
   font-size: 36px;
   font-weight: 300;
 }
@@ -53,13 +47,14 @@ body {
   height: 2px;
   background-color: var(--register-line-color);
   top: 50%;
-  left: 5px;
-  right: 5px;
+  left: 0;
+  right: 0;
   z-index: -1;
 }
 .register-info {
   margin-top: 0;
   color: var(--text-color);
+  font-size: var(--font-size);
   text-align: center;
 }
 form {
@@ -68,13 +63,22 @@ form {
 }
 input {
   padding: 10px 20px;
-  margin: 10px;
+  margin: 10px 0;
   border: 2px solid grey;
   border-radius: 5px;
+  font-size: var(--font-size);
+}
+.user-name {
+  display: flex;
+  justify-content: space-between;
+}
+/* minimum space between first and last names */
+.user-name input+input{
+  margin-left: 20px;
 }
 .btn {
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 10px;
+  margin-top: 10px;
   color: white;
   background-color: var(--link-color);
   text-transform: capitalize;
@@ -83,11 +87,6 @@ input {
   font-size: 20px;
   cursor: pointer;
 }
-.user-name {
-  display: flex;
-  justify-content: space-between;
-}
-
 .terms-police {
   color: grey;
 }
@@ -97,6 +96,7 @@ input {
 }
 .sign-in{
   color: var(--singIn-color);
+  margin-top: 10px;
   text-align: center;
 }
 .sign-in > a {
